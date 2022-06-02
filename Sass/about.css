@@ -198,127 +198,203 @@ textarea {
   overflow: hidden;
 }
 
-footer {
-  background-color: #283E6D;
-  padding: 20px 70px 5px;
-  margin-top: 70px;
+.about_section {
+  padding: 0 70px;
 }
 
 @media (max-width: 48.6875em) {
-  footer {
-    margin-top: 30px;
-    padding: 10px 25px;
+  .about_section {
+    padding: 0 25px;
   }
-}
-
-footer .columns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-}
-
-@media (max-width: 48.6875em) {
-  footer .columns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    text-align: center;
-  }
-}
-
-footer .columns .logo {
-  position: relative;
-  width: 20%;
-}
-
-@media (max-width: 48.6875em) {
-  footer .columns .logo {
-    width: 100%;
-  }
-}
-
-footer .columns .logo #logo {
-  opacity: 0.85;
-  width: 100%;
-}
-
-@media (max-width: 48.6875em) {
-  footer .columns .logo #logo {
+  .about_section #earth-image {
     display: none;
   }
 }
 
-footer .columns .logo .social {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.about_section .origins, .about_section .presence {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
 }
 
 @media (max-width: 48.6875em) {
-  footer .columns .logo .social {
-    position: relative;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .about_section .origins, .about_section .presence {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-footer .columns .logo .social img {
-  width: 2.1875rem;
-  height: 2.1875rem;
-  margin-right: 10px;
+.about_section .origins .right, .about_section .origins .left, .about_section .presence .right, .about_section .presence .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-footer .columns .info {
-  min-width: 250px;
+.about_section .origins .right h1, .about_section .origins .left h1, .about_section .presence .right h1, .about_section .presence .left h1 {
+  width: 100%;
 }
 
-footer .columns .info p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-footer .columns .info :last-child {
+.about_section .origins .right p, .about_section .origins .left p, .about_section .presence .right p, .about_section .presence .left p {
   margin-bottom: 0;
+}
+
+.about_section .origins .right img, .about_section .origins .left img, .about_section .presence .right img, .about_section .presence .left img {
+  width: 85%;
+}
+
+@media (max-width: 48.6875em) {
+  .about_section .origins .right img, .about_section .origins .left img, .about_section .presence .right img, .about_section .presence .left img {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 48.75em) {
+  .about_section .origins .left, .about_section .presence .left {
+    padding-right: 30px;
+  }
+  .about_section .origins .right, .about_section .presence .right {
+    padding-left: 30px;
+  }
+}
+
+.about_trade {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  overflow: hidden;
+  height: 35vh;
+  padding: 20px 70px;
+}
+
+@media (max-width: 48.6875em) {
+  .about_trade {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 25px;
+    height: unset;
+  }
+}
+
+@media (max-width: 39.937em) {
+  .about_trade {
+    background-color: #283E6D;
+  }
+}
+
+.about_trade img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 39.937em) {
+  .about_trade img {
+    display: none;
+  }
+}
+
+@media (max-width: 48.6875em) {
+  .about_trade img {
+    width: unset;
+  }
+}
+
+.about_trade p {
+  width: 60%;
+  color: white;
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+@media (max-width: 48.6875em) {
+  .about_trade p {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.about_trade .main_button {
+  border: .125rem solid white;
+  -webkit-box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
+}
+
+.about_trade .main_button:hover {
+  border: 0.25rem solid #A01100;
+}
+
+.more_about {
+  padding: 0 70px;
+  margin: 50px 0;
+}
+
+@media (max-width: 48.6875em) {
+  .more_about {
+    padding: 0 25px;
+  }
+}
+
+.more_about .testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 63.937em) {
+  .more_about .testimonials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.more_about .testimonials .testimonial {
+  width: 30%;
+  min-height: 65vh;
+  max-height: 100vh;
+  margin: 0 0 25px 0;
+}
+
+.more_about .testimonials .testimonial p {
   padding-right: 0;
 }
 
-footer .columns .line {
-  position: relative;
-  width: 2px;
-  background-color: white;
-}
-
-@media (max-width: 48.6875em) {
-  footer .columns .line {
-    height: 2px;
+@media (max-width: 63.937em) {
+  .more_about .testimonials .testimonial {
     width: 100%;
-    margin: 15px 0;
+    min-height: 30vh;
   }
 }
-
-footer .credit {
-  padding-top: 25px;
-  color: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  font-size: 0.75rem;
-  text-align: center;
-}
-
-footer .credit span {
-  font-family: 'Allura', cursive;
-  font-size: 1rem;
-}
-/*# sourceMappingURL=Footer.css.map */
+/*# sourceMappingURL=About.css.map */

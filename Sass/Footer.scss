@@ -3,18 +3,35 @@
 footer{
     background-color: $dark_blue;
     padding: 20px $Left_Padding 5px;
-    margin-top: $Large_Margin;
+    margin-top: $Top_Margin;
+
+    @include breakpoint-down(tablet){
+        margin-top: $Top_Margin-small;
+        padding: 10px $Left_Padding-small;
+    }
+
     .columns{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+        @include breakpoint-down(tablet){
+            flex-direction: column;
+            align-content: center;
+            text-align: center;
+        }
         .logo{
             position: relative;
             width: 20%;
+            @include breakpoint-down(tablet){
+                width: 100%;
+            }
             #logo{
                 opacity: 0.85;
                 width: 100%;
+                @include breakpoint-down(tablet){
+                    display: none;
+                }
             }
 
             .social{
@@ -22,6 +39,10 @@ footer{
                 bottom: 0;
                 left: 0;
                 display: flex;
+                @include breakpoint-down(tablet){
+                    position: relative;
+                    justify-content: center;
+                }
                 img{
                     width: rem(35);
                     height: rem(35);
@@ -47,6 +68,11 @@ footer{
             position: relative;
             width: 2px;
             background-color: white;
+            @include breakpoint-down(tablet){
+                height: 2px;
+                width: 100%;
+                margin: 15px 0;
+            }
         }
     }
 

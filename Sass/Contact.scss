@@ -1,0 +1,83 @@
+@import './_globals';
+
+.title_header{
+    #blue-bg{
+        background-color: rgba(40, 62, 109, .7);
+        box-shadow: 0px 5px 30px rgba(40, 62, 109, 0.58);
+    }
+
+    @include breakpoint-down(tablet){
+        #boat-image{
+            width: unset;
+            height: 100%;
+        }
+    }
+}
+
+.contact_section{
+    max-height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $Left_Padding;
+    @include breakpoint-down(tablet){
+        max-height: unset;
+        flex-direction: column;
+    }
+
+    .contact{
+        width: 40%;
+        @include breakpoint-down(tablet){
+            width: 100%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .map{
+        width: 55%;
+        padding-left: 30px;
+        @include breakpoint-down(tablet){
+            width: 100%;
+        }
+    }
+}
+
+.contact_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 $Left_Padding;
+    margin-top: $Top_Margin;
+    @include breakpoint-down(tablet){
+        flex-direction: column;
+    }
+    .info{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        @include breakpoint-down(tablet){
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 25px;
+            & > div{
+                width: 50%;
+                text-align: center;
+            }
+        }
+        img{
+            width: rem(100);
+            height: rem(100);
+            margin-right: 25px;
+        }
+        h3{
+            color: $text_color;
+            margin-bottom: 12px;
+        }
+        p{
+            margin: 0;
+            font-size: $small-size;
+        }
+    }
+}

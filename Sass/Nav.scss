@@ -1,0 +1,128 @@
+@import './_globals';
+
+.nav{
+    width: 100%;
+    height: $nav_height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $Left_Padding;
+    position: absolute;
+    top: 0;
+    z-index: 1000;  
+    
+    @include breakpoint-down(medium){
+        padding: 0 $Left_Padding-small;
+    }
+
+    .logo{
+        height: rem(45);
+        img{
+            height: 100%;
+        }
+    }
+
+    &_items  {
+        min-width: 45%;
+        @include breakpoint-down(tablet){
+            display: none;
+        }
+        ul{
+            display: flex;
+            padding: 0;
+            justify-content: space-between;
+            li a{
+                cursor: pointer;
+                font-weight: 600;
+                margin-right: 15px;
+                font-size: $small-size;
+                color: white;
+                padding: 8px 20px;
+                transition: .2s ease-out;
+                border-radius: 100px;
+
+                &.active{
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+
+            li a:hover{
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            
+        }
+    }
+
+    .language select{
+        background: none;
+        border: 2.5px solid white;
+        border-radius: 8px;
+        padding: 4px 8px;
+        outline: none;
+        font-weight: normal;
+        font-size: rem(10);
+        color: white;
+        text-transform: uppercase;
+
+        @include breakpoint-down(tablet){
+            display: none;
+        }
+    }
+
+    .nav_mobile{
+        @include breakpoint-up(tablet){
+            display: none;
+        }
+        &_humberger{
+            height: $nav_height;
+            width: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            span.line{
+                width: 100%;
+                height: 4px;
+                margin-bottom: 8px;
+                background-color: white;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &_items{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            min-width: 60vw;
+            height: 100vh;
+            padding: $nav_height $Left_Padding-small;
+            box-shadow: $image_shadow;
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 100%;
+                text-align: center;
+                padding: 0;
+
+                li{
+                    border-radius: 16px;
+                    h3{
+                        margin: 16px 0;
+                        border-radius: 16px;
+                    }
+                    &.active{
+                        background-color: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+
+}      

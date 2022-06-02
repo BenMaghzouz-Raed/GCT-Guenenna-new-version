@@ -1,0 +1,129 @@
+@import './_globals';
+
+.about_section{
+    padding: 0 $Left_Padding;
+    @include breakpoint-down(tablet){
+        padding: 0 $Left_Padding-small;
+
+        #earth-image{
+            display: none;
+        }
+    }
+    .origins, .presence{
+        display: flex;
+        align-items: center;
+        margin-bottom: $Top_Margin;
+        @include breakpoint-down(tablet){
+            flex-direction: column;
+        }
+        .right, .left{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+                width: 100%;
+            }
+            p{
+                margin-bottom: 0;
+            }
+            img{
+                width: 85%;
+                @include breakpoint-down(tablet){
+                    width: 100%;
+                    margin-top: 25px;
+                }
+            }
+        }
+        @include breakpoint-up(tablet){
+            .left{
+                padding-right: 30px;
+            }
+            .right{
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+.about_trade{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    height: 35vh;
+    padding: 20px $Left_Padding;
+    @include breakpoint-down(tablet){
+        flex-direction: column;
+        padding: 20px $Left_Padding-small;
+        height: unset;
+    }
+    @include breakpoint-down(small){
+        background-color: $dark_blue;
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @include breakpoint-down(small){
+            display: none;
+        }
+        @include breakpoint-down(tablet){
+            width: unset;
+        }
+    }
+
+    p{
+        width: 60%;
+        color: white;
+        font-weight: 500;
+        font-size: rem(28);
+        @include breakpoint-down(tablet){
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .main_button{
+        border: .125rem solid white;
+        box-shadow: -6px 11px 14px -6px rgba(0,0,0,0.5);
+        &:hover{
+            border: .25rem solid $dark_red;
+        }
+    }
+    
+}
+
+.more_about{
+    padding: 0 $Left_Padding;
+    margin: 50px 0;
+    @include breakpoint-down(tablet){
+        padding: 0 $Left_Padding-small;
+    }
+    .testimonials{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @include breakpoint-down(medium){
+            flex-direction: column;
+        }
+
+        .testimonial{
+            width: 30%;
+            min-height: 65vh;
+            max-height: 100vh;
+            margin: 0 0 25px 0; 
+            p{
+                padding-right: 0;
+            }
+            @include breakpoint-down(medium){
+                width: 100%;
+                min-height: 30vh;
+            }
+        }
+    }
+}
