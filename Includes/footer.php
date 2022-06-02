@@ -42,7 +42,7 @@
 
         </div>
         <div class="credit">
-            ©2020 All Rights Reserved. This website is made by <span><a href="mailto:bmraed7@gmail.com">BMRaed</a></span>
+            ©2020 All Rights Reserved To GCT. This website is made by <span><a href="mailto:bmraed7@gmail.com">BMRaed</a></span>
         </div>
     </footer>
 

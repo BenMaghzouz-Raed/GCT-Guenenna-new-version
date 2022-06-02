@@ -37,7 +37,7 @@ define('PAGE', "Contact");
         </form>
     </div>
     <div class="map">
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.1759020064787!2d10.703944499999997!3d35.301610499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1301fc8476feb361%3A0x2341fcd7c6ac4f61!2s48%20Ave%20Farhat%20Hached%2C%20El%20Jem!5e0!3m2!1sar!2stn!4v1654198814385!5m2!1sar!2stn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
