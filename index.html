@@ -1,7 +1,3 @@
-<?php  
-define('PAGE', "Home");
-?>
-
 <!-- ** HEAD ** -->
 <!DOCTYPE html>
 <html lang="en">
@@ -34,11 +30,7 @@ define('PAGE', "Home");
 
     <!-- ** NAV ** -->
 
-    <nav class="nav" style=<?php  
-        if(PAGE == 'Home') { echo "'background-color: transparent;'" ;}
-        elseif (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
-        else { echo "'background-color: #283E6D;'"; }
-    ?> >
+    <nav class="nav" style='background-color: transparent;'>
 
     <a href="./" class="logo">
         <img src="Images/logo.svg" alt="">
@@ -46,22 +38,22 @@ define('PAGE', "Home");
     <div class="nav_items">
         <ul>
             <li>
-                <a href="Pages/index.php" class= <?php if (PAGE=='Home') { echo "'active'"; } else  { echo ""; } ?>>
+                <a href="Pages/index.php" class='active'>
                 Home
                 </a>
             </li>
             <li>
-                <a href="Pages/products.php" class= <?php if (PAGE=='Our Product') { echo "'active'"; } else  { echo ""; } ?>>
+                <a href="Pages/products.php">
                 Our Product
                 </a>
             </li>
             <li>
-                <a href="Pages/about.php" class= <?php if (PAGE=='About Us') { echo "'active'"; } else  { echo ""; } ?> >
+                <a href="Pages/about.php">
                 About Us
                 </a>
             </li>
             <li>
-                <a href="Pages/contact.php" class= <?php if (PAGE=='Contact') { echo "'active'"; } else  { echo ""; } ?> >
+                <a href="Pages/contact.php">
                 Contact
                 </a>
             </li>
@@ -83,26 +75,24 @@ define('PAGE', "Home");
             <span class="line"></span>
         </div>
         
-        <div class="nav_mobile_items" style=<?php  
-            if (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
-            else { echo "'background-color: #283E6D;'"; }?> >
+        <div class="nav_mobile_items" style='background-color: #283E6D;'>
             <ul>
-                <li class= <?php if (PAGE=='Home') { echo "'active'"; } else  { echo ""; } ?>>
+                <li class='active'>
                     <a href="Pages/index.php">
                     <h3>Home</h3>
                     </a>
                 </li>
-                <li class= <?php if (PAGE=='Our Product') { echo "'active'"; } else  { echo ""; } ?>>
+                <li>
                     <a href="Pages/products.php">
                     <h3>Our Product</h3>
                     </a>
                 </li>
-                <li class= <?php if (PAGE=='About Us') { echo "'active'"; } else  { echo ""; } ?>>
+                <li>
                     <a href="Pages/about.php">
                     <h3>About Us</h3>
                     </a>
                 </li>
-                <li class= <?php if (PAGE=='Contact') { echo "'active'"; } else  { echo ""; } ?>>
+                <li>
                     <a href="Pages/contact.php">
                     <h3>Contact</h3>
                     </a>
@@ -238,9 +228,7 @@ define('PAGE', "Home");
 <!-- ** FOOTER ** -->
 <link rel="stylesheet" href="Sass/Footer.css" type="text/css">
 
-<footer style=<?php  
-    if (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
-    else { echo "'background-color: #283E6D;'"; }
+<footer style='background-color: #283E6D;'
 ?> >
         <div class="columns">
 
