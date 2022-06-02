@@ -1,0 +1,64 @@
+@import './_globals';
+
+footer{
+    background-color: $dark_blue;
+    padding: 20px $Left_Padding 5px;
+    margin-top: $Large_Margin;
+    .columns{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        .logo{
+            position: relative;
+            width: 20%;
+            #logo{
+                opacity: 0.85;
+                width: 100%;
+            }
+
+            .social{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                img{
+                    width: rem(35);
+                    height: rem(35);
+                    margin-right: 10px;
+                }
+            }
+        }
+    
+        .info{
+            min-width: 250px;
+            p{
+                font-size: rem(16);
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            :last-child{
+                margin-bottom: 0;
+                padding-right: 0;
+            }
+        }
+
+        .line{
+            position: relative;
+            width: 2px;
+            background-color: white;
+        }
+    }
+
+    .credit{
+        padding-top: 25px;
+        color: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        font-size: rem(12);
+        text-align: center;
+        span{
+            font-family: 'Allura', cursive;
+            font-size: rem(16);
+        }
+    }
+}

@@ -1,0 +1,152 @@
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+} 
+
+// FUNCTIONS
+
+@function rem($pixels, $context: 16){
+    @return ($pixels / $context) * 1rem;
+}
+  
+// VARIABLES
+
+$dark_blue: #283E6D;
+$dark_red: #A01100;
+$dark_gold: #C47E10;
+$soft_gray: #F4F4F4;
+$text_color: #343232;
+
+$main_font: 'Montserrat', sans-serif;
+$sec_font: 'Libre Baskerville', serif;
+
+$Left_Padding: 50px;
+$Left_Margin: 50px;
+$Top_Margin: 100px;
+$Large_Margin: 180px;
+
+
+
+body{
+    font-family: $main_font ;
+    overflow-x: hidden;
+    margin:0;
+    padding:0;
+}
+
+a, a:hover, a:focus{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1{
+    position: relative;
+    font-weight: 700;
+    margin-top: 0;
+    font-size: rem(32);
+}
+h1::after {
+    content: '';
+    height: 4px;
+    width: 90px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: $dark_blue;
+}
+
+h2{
+    color: white;
+    font-weight: 700;
+    margin-top: 0;
+    font-size: rem(32);
+    text-transform: uppercase;
+}
+
+h3{
+    font-weight: 600;
+    font-size: rem(20);
+    color: white;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+p{
+    color: $text_color;
+    font-family: $main_font;
+    font-size: 22px;
+}
+
+ul{
+    list-style: none;
+}
+
+// MAIN BUTTON
+
+.main_button{
+  width: 200px;
+  height: 60px;
+  border-radius: 0 20px 0 20px;
+  background: $dark_red;
+  border: .25rem solid $dark_red;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.35s;
+}
+.main_button:hover{
+    color: $dark_red;
+    border-radius: 0;
+}
+
+.main_button::after{
+    background: white;
+    padding: .5rem .5rem;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    transform: scale(0, 0);
+
+}
+.main_button::after, .main_button:hover::after{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.35s;
+}
+
+.main_button:hover::after{
+    transform: scale(1,1);
+}
+
+
+// SECONDARY BUTTON 
+.sec_button{
+    border: 3.5px solid white;
+    border-radius: 0 20px 0 20px;
+    width: 180px;
+    height: 55px;
+    color: white;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+//  FOOTER
+
+
+
+
+
