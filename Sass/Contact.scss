@@ -21,6 +21,7 @@
     justify-content: space-between;
     padding: 0 $Left_Padding;
     @include breakpoint-down(tablet){
+        padding: 0 $Left_Padding-small;
         max-height: unset;
         flex-direction: column;
     }

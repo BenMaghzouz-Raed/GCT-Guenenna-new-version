@@ -225,6 +225,7 @@ textarea {
 
 @media (max-width: 48.6875em) {
   .contact_section {
+    padding: 0 25px;
     max-height: unset;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

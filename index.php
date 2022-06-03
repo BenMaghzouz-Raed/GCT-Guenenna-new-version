@@ -21,24 +21,23 @@ define('PAGE', "Home");
     
     <!-- Css Styles -->
     <link rel="stylesheet" href="Sass/style.css" type="text/css">
-    <link rel="stylesheet" href="Sass/Nav.css" type="text/css">
-
-    <!-- JavaScript -->
-    <script src="JavaScript/main.js" defer></script>
+    <link rel="stylesheet" href="Sass/Footer.css" type="text/css">
 
 </head>
 
 <body>
+    
 
 <header class="header">
 
     <!-- ** NAV ** -->
+    <link rel="stylesheet" href="Sass/Nav.css" type="text/css">
 
-    <nav class="nav" style=<?php  
-        if(PAGE == 'Home') { echo "'background-color: transparent;'" ;}
-        elseif (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
-        else { echo "'background-color: #283E6D;'"; }
-    ?> >
+<nav class="nav" style=<?php  
+    if(PAGE == 'Home') { echo "'background-color: transparent;'" ;}
+    elseif (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
+    else { echo "'background-color: #283E6D;'"; }
+?> >
 
     <a href="./" class="logo">
         <img src="Images/logo.svg" alt="">
@@ -77,7 +76,7 @@ define('PAGE', "Home");
 
 
     <div class="nav_mobile">
-        <div class="nav_mobile_humberger">
+        <div class="nav_mobile_burger_toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -108,7 +107,16 @@ define('PAGE', "Home");
                     </a>
                 </li>
             </ul>
+
+            <div class="languages">
+                <span>ENG</span>
+                -
+                <span>FR</span>
+                -
+                <span>DE</span>
+            </div>
         </div>
+        
     </div>
 </nav>
 
@@ -124,8 +132,8 @@ define('PAGE', "Home");
                 </p>     
             </div>
             <div class="buttons">
-                <a href="./contact.php#contact-form"><button class="main_button">Contact Us</button></a>
-                <a href="./about.php"><button class="sec_button">Know more</button></a>
+                <a href="./Pages/contact.php#contact-form"><button class="main_button">Contact Us</button></a>
+                <a href="./Pages/about.php"><button class="sec_button">Know more</button></a>
             </div>
         </div>
     </section>
@@ -144,7 +152,7 @@ define('PAGE', "Home");
             Established in the year 1995, we began our journey of exporting high-quality goods with 
             automobiles and small boats.
         </p>
-        <a href="./about.php#origins"><button class="main_button">Learn More</button></a>
+        <a href="./Pages/about.php#origins"><button class="main_button">Learn More</button></a>
     </div>
     <div class="right">
         <img src="Images/2.jpg" alt="">
@@ -206,7 +214,7 @@ define('PAGE', "Home");
             We know that we need to provide superb quality that impacts consumer experience and improves 
             the brand image of our trading partners.
         </p>
-        <a href="./about.php#why-us"><button class="main_button">Know More</button></a>
+        <a href="./Pages/about.php#why-us"><button class="main_button">Know More</button></a>
     </div>
 </section>
 <section class="Product_Section">
@@ -228,15 +236,42 @@ define('PAGE', "Home");
                 </p>     
             </div>
             <div class="buttons">
-                <button class="main_button">IMPORT NOW</button>
-                <a href="./products.php#our-oliver"><button class="sec_button">LEARN MORE</button></a>
+                <button class="main_button" id='btnOpenForm'>IMPORT NOW</button>
+                <a href="./Pages/products.php#our-oliver"><button class="sec_button">LEARN MORE</button></a>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Trade With Us PopUp -->
+<div class="form-popup-bg">
+  <div class="form-container">
+    <img src="Images/cancel-96.png" id='btnCloseForm' class="close-button">
+    <h1>Trade With us</h1>
+    <p>To send a request for trading. Please complete this form.</p>
+    <form action="">
+      <div class="form-group">
+        <label for="name">Company Name*</label>
+        <input type="text" class="form-control" id="name"/>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <input class="form-control" type="text" id="country"/>
+      </div>
+      <div class="form-group">
+        <label for="email">E-Mail*</label>
+        <input class="form-control" type="text" id="email"/>
+      </div>
+      <div class="form-group">
+        <label for="message">Note</label>
+        <textarea id="message" cols="30" rows="30"></textarea>
+      </div>
+      <button class="send_button">Send</button>
+    </form>
+  </div>
+</div>
+
 <!-- ** FOOTER ** -->
-<link rel="stylesheet" href="Sass/Footer.css" type="text/css">
 
 <footer style=<?php  
     if (PAGE == 'Our Product') { echo "'background-color: #C47E10;'";}
@@ -245,7 +280,7 @@ define('PAGE', "Home");
         <div class="columns">
 
             <div class="logo">
-                <img src="Images/logo2.svg" alt="" id="logo">
+                <a href="./"><img src="Images/logo2.svg" alt="" id="logo"></a>
 
                 <div class="social">
                    <a href="http://www.facebook.com" target="_blank"><img src="Images/facebook-logo-64.png" alt=""></a> 
@@ -284,6 +319,8 @@ define('PAGE', "Home");
         </div>
     </footer>
 
-    
+        <!-- JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="JavaScript/main.js" defer></script>
     </body>
 </html>
