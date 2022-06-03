@@ -7,7 +7,7 @@
         <div class="columns">
 
             <div class="logo">
-                <img src="../Images/logo2.svg" alt="" id="logo">
+                <a href="./"><img src="../Images/logo2.svg" alt="" id="logo"></a>
 
                 <div class="social">
                    <a href="http://www.facebook.com" target="_blank"><img src="../Images/facebook-logo-64.png" alt=""></a> 

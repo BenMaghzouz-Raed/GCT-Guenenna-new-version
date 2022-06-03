@@ -56,7 +56,7 @@ define('PAGE', "About Us");
         <p>Whether you’re a company or an individual, a wholesaler, or a reseller, we’re are open to all business prospects for 
             expanding to new markets.
         </p>
-        <button class='main_button'>Trade With Us</button>
+        <button class='main_button' id='btnOpenForm'>Trade With Us</button>
     </section>
 
     <section class="more_about" id="why-us">
@@ -118,6 +118,9 @@ define('PAGE', "About Us");
     </section>
 
 </header>
+
+<!-- Trade With Us PopUp -->
+<?php require_once '../Includes/trade_popup.php'; ?>
 
 <!-- ** FOOTER ** -->
 <?php require_once '../Includes/footer.php'; ?>

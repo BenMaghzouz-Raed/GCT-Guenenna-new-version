@@ -3,10 +3,9 @@
 footer{
     background-color: $dark_blue;
     padding: 20px $Left_Padding 5px;
-    margin-top: $Top_Margin;
+    margin-top: $Left_Margin;
 
     @include breakpoint-down(tablet){
-        margin-top: $Top_Margin-small;
         padding: 10px $Left_Padding-small;
     }
 

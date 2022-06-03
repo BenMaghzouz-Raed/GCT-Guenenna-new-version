@@ -43,7 +43,7 @@
 
 
     <div class="nav_mobile">
-        <div class="nav_mobile_humberger">
+        <div class="nav_mobile_burger_toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -74,6 +74,15 @@
                     </a>
                 </li>
             </ul>
+
+            <div class="languages">
+                <span>ENG</span>
+                -
+                <span>FR</span>
+                -
+                <span>DE</span>
+            </div>
         </div>
+        
     </div>
 </nav>

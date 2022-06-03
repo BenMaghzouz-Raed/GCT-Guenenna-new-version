@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../Sass/style.css" type="text/css">
 
     <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../JavaScript/main.js" defer></script>
 
 </head>

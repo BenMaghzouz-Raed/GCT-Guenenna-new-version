@@ -125,12 +125,15 @@ define('PAGE', "Home");
                 </p>     
             </div>
             <div class="buttons">
-                <button class="main_button">IMPORT NOW</button>
+                <button class="main_button" id='btnOpenForm'>IMPORT NOW</button>
                 <a href="./products.php#our-oliver"><button class="sec_button">LEARN MORE</button></a>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Trade With Us PopUp -->
+<?php require_once '../Includes/trade_popup.php'; ?>
 
 <!-- ** FOOTER ** -->
 <?php include '../Includes/footer.php'; ?>

@@ -117,10 +117,12 @@ define('PAGE', "Our Product");
                 If you think you’re ready to trade and supply the best extra virgin olive oil out there to customers, 
                 you can reach out to us.
             </p>
-            <button class="main_button">Import Now</button>
+            <button class="main_button" id='btnOpenForm'>Import Now</button>
         </div>
     </section>
 
+    <!-- Trade With Us PopUp -->
+    <?php require_once '../Includes/trade_popup.php'; ?>
 
 <!-- ** FOOTER ** -->
 <?php require_once '../Includes/footer.php'; ?>
