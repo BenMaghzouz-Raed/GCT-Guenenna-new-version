@@ -13,32 +13,34 @@
         <ul>
             <li>
                 <a href="../Pages/index.php" class= <?php if (PAGE=='Home') { echo "'active'"; } else  { echo ""; } ?>>
-                Home
+                <?=$_Nav_Footer[0]?>
                 </a>
             </li>
             <li>
                 <a href="../Pages/products.php" class= <?php if (PAGE=='Our Product') { echo "'active'"; } else  { echo ""; } ?>>
-                Our Product
+                <?=$_Nav_Footer[1]?>
                 </a>
             </li>
             <li>
                 <a href="../Pages/about.php" class= <?php if (PAGE=='About Us') { echo "'active'"; } else  { echo ""; } ?> >
-                About Us
+                <?=$_Nav_Footer[2]?>
                 </a>
             </li>
             <li>
                 <a href="../Pages/contact.php" class= <?php if (PAGE=='Contact') { echo "'active'"; } else  { echo ""; } ?> >
-                Contact
+                <?=$_Nav_Footer[3]?>
                 </a>
             </li>
         </ul>
     </div>
     <div class="language">
-        <select Name="" Size="">  
-            <option><span>ENG</span> <img src="" alt=""></option>  
-            <option><span>FR</span> <img src="" alt=""></option>  
-            <option><span>DE</span> <img src="" alt=""></option>  
-        </select> 
+        <form method="post">
+            <select Name="select-lang" onchange='this.form.submit();'>  
+                <option name="lang" <?php if($_SESSION["lang"] == "en") echo 'selected'?> value="en"><span>ENG</span> <img src="" alt=""></option>  
+                <option name="lang" <?php if($_SESSION["lang"] == "fr") echo 'selected'?> value="fr"><span>FR</span> <img src="" alt=""></option>  
+                <option name="lang" <?php if($_SESSION["lang"] == "de") echo 'selected'?> value="de"><span>DE</span> <img src="" alt=""></option>  
+            </select> 
+        </form>
     </div>
 
 
@@ -55,32 +57,32 @@
             <ul>
                 <li class= <?php if (PAGE=='Home') { echo "'active'"; } else  { echo ""; } ?>>
                     <a href="../Pages/index.php">
-                    <h3>Home</h3>
+                    <h3><?=$_Nav_Footer[0]?></h3>
                     </a>
                 </li>
                 <li class= <?php if (PAGE=='Our Product') { echo "'active'"; } else  { echo ""; } ?>>
                     <a href="../Pages/products.php">
-                    <h3>Our Product</h3>
+                    <h3><?=$_Nav_Footer[1]?></h3>
                     </a>
                 </li>
                 <li class= <?php if (PAGE=='About Us') { echo "'active'"; } else  { echo ""; } ?>>
                     <a href="../Pages/about.php">
-                    <h3>About Us</h3>
+                    <h3><?=$_Nav_Footer[2]?></h3>
                     </a>
                 </li>
                 <li class= <?php if (PAGE=='Contact') { echo "'active'"; } else  { echo ""; } ?>>
                     <a href="../Pages/contact.php">
-                    <h3>Contact</h3>
+                    <h3><?=$_Nav_Footer[3]?></h3>
                     </a>
                 </li>
             </ul>
 
             <div class="languages">
-                <span>ENG</span>
-                -
-                <span>FR</span>
-                -
-                <span>DE</span>
+                <form method="post">
+                    <button name="select-lang" value='en' type='submit' class= <?php if ($_SESSION["lang"] == "en")  {echo 'selected';}?> >ENG</span>
+                    <button name="select-lang" value='fr' type='submit' class= <?php if ($_SESSION["lang"] == "fr")  {echo 'selected';}?> >FR</span>
+                    <button name="select-lang" value='de' type='submit' class= <?php if ($_SESSION["lang"] == "de") {echo'selected';} ?> >DE</span>
+                </form>
             </div>
         </div>
         

@@ -53,19 +53,14 @@
         }
     }
 
-    .language select{
-        background: none;
-        border: 2.5px solid white;
-        border-radius: 8px;
-        padding: 4px 8px;
-        outline: none;
-        font-weight: normal;
-        font-size: rem(10);
-        color: white;
-        text-transform: uppercase;
+    .language {
 
-        @include breakpoint-down(tablet){
-            display: none;
+        .dropdown-select{
+            height: 32px;
+            line-height: 30px;
+            @include breakpoint-down(tablet){
+                display: none;
+            }
         }
     }
 
@@ -173,10 +168,25 @@
 
             .languages{
                 height: 20%;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
                 color: white;
+                form{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    button{
+                        border: none;
+                        padding: 6px 12px;
+                        font-size: $small-size;
+                        font-weight: 500;
+                        min-width: 65px;
+                    }
+                    button.selected{
+                        color: white;
+                        background-color: rgba(0, 0, 0, 0.3);
+                    }
+                }
+
                 span{
                     font-size: $small-size;
                 }

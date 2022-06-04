@@ -105,12 +105,17 @@ input:focus, textarea:focus {
 
 textarea {
   max-width: 100%;
+  resize: vertical;
   min-width: 100%;
   height: 18vh;
 }
 
 .main_button {
-  width: 170px;
+  -webkit-box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
+          box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
+  min-width: 170px;
+  width: auto;
+  padding: 6px 12px;
   height: 55px;
   border-radius: 0 18px 0 18px;
   background: #A01100;
@@ -166,7 +171,9 @@ textarea {
 .sec_button {
   border: 3.5px solid white;
   border-radius: 0 15px 0 15px;
-  width: 160px;
+  min-width: 160px;
+  width: auto;
+  padding: 5px 10px;
   height: 50px;
   color: white;
   background-color: transparent;
@@ -271,20 +278,13 @@ textarea {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.nav .language select {
-  background: none;
-  border: 2.5px solid white;
-  border-radius: 8px;
-  padding: 4px 8px;
-  outline: none;
-  font-weight: normal;
-  font-size: 0.625rem;
-  color: white;
-  text-transform: uppercase;
+.nav .language .dropdown-select {
+  height: 32px;
+  line-height: 30px;
 }
 
 @media (max-width: 48.6875em) {
-  .nav .language select {
+  .nav .language .dropdown-select {
     display: none;
   }
 }
@@ -431,6 +431,10 @@ textarea {
 
 .nav .nav_mobile_items .languages {
   height: 20%;
+  color: white;
+}
+
+.nav .nav_mobile_items .languages form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,7 +444,19 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.nav .nav_mobile_items .languages form button {
+  border: none;
+  padding: 6px 12px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  min-width: 65px;
+}
+
+.nav .nav_mobile_items .languages form button.selected {
   color: white;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav .nav_mobile_items .languages span {

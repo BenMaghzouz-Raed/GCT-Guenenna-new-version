@@ -13,8 +13,9 @@ define('PAGE', "Our Product");
         <img src="../Images/slider_3.jpg" alt="">        
         <div class='title'>
             <span class='top_page_title'>
-                100% Biological Extra Virgin<br/>
-                Olive Oil
+                <?=$_Our_Product[0]?>
+                <br/>
+                <?=$_Our_Product[1]?>
             </span>
         </div>
     
@@ -27,10 +28,10 @@ define('PAGE', "Our Product");
         </div>
         <div class="info">
             <div class="info_title">
-                <h2>Our Story</h2>
+                <h2><?=$_Our_Product[2]?></h2>
             </div>
-            <p>We belong to a family of farmers, and our fathers and forefathers have been known for their excellent cultivation and agricultural techniques. 
-                We have our own home-grown farms of olive trees that we have nurtured with great love and care.
+            <p>
+                <?=$_Our_Product[3]?>
             </p>
         </div>
     </section>
@@ -40,7 +41,7 @@ define('PAGE', "Our Product");
             <img src="../Images/icon_olive.png" id='our-oliver'>
         </div>
 
-        <h4>Our Oliver Is The Best Because</h4>
+        <h4><?=$_Our_Product[4]?></h4>
 
         <div class="details">
             <div class="left">
@@ -50,7 +51,7 @@ define('PAGE', "Our Product");
                         <h2>1</h2>
                     </div>
                     <p>
-                    It is extracted from our own farms of olive trees, so we always pick the best produce.
+                        <?=$_Our_Product[5]?>                    
                     </p>
                 </div>
                 <div class="single-detail">
@@ -59,7 +60,7 @@ define('PAGE', "Our Product");
                         <h2>2</h2>
                     </div>
                     <p>
-                    It is 100% biological and extra virgin.
+                        <?=$_Our_Product[6]?>
                     </p>
                 </div>
                 <div class="single-detail">
@@ -68,7 +69,7 @@ define('PAGE', "Our Product");
                         <h2>3</h2>
                     </div>
                     <p>
-                    We ensure the pressing takes place shortly after the harvest. This is possible because we own our farms and carry out these processes in the same place.
+                        <?=$_Our_Product[7]?>                    
                     </p>
                 </div>
             </div>
@@ -80,7 +81,7 @@ define('PAGE', "Our Product");
                         <h2>4</h2>
                     </div>
                     <p>
-                    It has low exposure to oxygen (the least peroxidation).
+                        <?=$_Our_Product[8]?>
                     </p>
                 </div>
                 <div class="single-detail">
@@ -89,7 +90,7 @@ define('PAGE', "Our Product");
                         <h2>5</h2>
                     </div>
                     <p>
-                    It has an acidity of less than 0.28 and contains low wax content.
+                        <?=$_Our_Product[9]?>
                     </p>
                 </div>
                 <div class="single-detail">
@@ -98,7 +99,7 @@ define('PAGE', "Our Product");
                         <h2>6</h2>
                     </div>
                     <p>
-                    It is completely pure, contains no added substances – no leaves or branches – and is extracted from the best quality olives.
+                        <?=$_Our_Product[10]?>                    
                     </p>
                 </div>
             </div> 
@@ -111,18 +112,19 @@ define('PAGE', "Our Product");
         </div>
         <div class="info">
             <div class="info_title">
-                <h2>Trading</h2>
+                <h2><?=$_Our_Product[11]?></h2>
             </div>
-            <p>We’re open to business opportunities for olive oil trading in international markets.<br>
-                If you think you’re ready to trade and supply the best extra virgin olive oil out there to customers, 
-                you can reach out to us.
+            <p>
+                <?=$_Our_Product[12]?>
+                <br>
+                <?=$_Our_Product[13]?>
             </p>
-            <button class="main_button" id='btnOpenForm'>Import Now</button>
+            <button class="main_button" id='btnOpenForm'><?=$_Our_Product[14]?></button>
         </div>
     </section>
 
-    <!-- Trade With Us PopUp -->
-    <?php require_once '../Includes/trade_popup.php'; ?>
+<!-- Trade With Us PopUp -->
+<?php require_once '../Includes/trade_popup.php'; ?>
 
 <!-- ** FOOTER ** -->
 <?php require_once '../Includes/footer.php'; ?>

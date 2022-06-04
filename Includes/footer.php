@@ -18,7 +18,7 @@
             <div class="line"></div>
             
             <div class="info">
-                <h3>Contact</h3>
+                <h3><?=$_Nav_Footer[3]?></h3>
                 <p>48 Farhat Hachad 5190<br/>
                     Mahdia, Tunisia
                 </p>
@@ -33,16 +33,16 @@
             <div class="line"></div>
 
             <div class="info">
-                <h3>Information</h3>
-                <a href="../Pages/products.php#trade-with-us"><p>Trade With Us</p></a>
-                <a href="../Pages/about.php#our-presence"><p>Why Us</p></a>
-                <a href="../Pages/about.php#origins"><p>Origins</p></a>
-                <a href="../Pages/contact.php#contact-form"><p>Help & FAQ</p></a>
+                <h3><?=$_Nav_Footer[4]?></h3>
+                <a href="../Pages/products.php#trade-with-us"><p><?=$_Nav_Footer[5]?></p></a>
+                <a href="../Pages/about.php#our-presence"><p><?=$_Nav_Footer[6]?></p></a>
+                <a href="../Pages/about.php#origins"><p><?=$_Nav_Footer[7]?></p></a>
+                <a href="../Pages/contact.php#contact-form"><p><?=$_Nav_Footer[8]?></p></a>
             </div>
 
         </div>
         <div class="credit">
-            ©2020 All Rights Reserved To GCT. This website is made by <span><a href="mailto:bmraed7@gmail.com">BMRaed</a></span>
+            ©2020 <?=$_Nav_Footer[9]?><span><a href="mailto:bmraed7@gmail.com">BMRaed</a></span>
         </div>
     </footer>
 

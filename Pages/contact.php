@@ -2,6 +2,73 @@
 define('PAGE', "Contact");
 ?>
 
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+require '../vendor/autoload.php';
+
+// Looing for .env at the root directory
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/..');
+$dotenv->load();
+
+$errors = [];
+$errorMessage = '';
+
+if (!empty($_POST['full-name'])) {
+    $name = $_POST['full-name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if (empty($name)) {
+        $errors[] = 'Name is empty';
+    }
+
+    if (empty($email)) {
+        $errors[] = 'Email is empty';
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email is invalid';
+    }
+
+    if (empty($message)) {
+        $errors[] = 'Message is empty';
+    }
+
+
+    if (!empty($errors)) {
+        $allErrors = join('<br/>', $errors);
+        $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+    } else {
+        $mail = new PHPMailer();
+
+        // specify SMTP credentials
+        $mail->isSMTP();
+        $mail->Host = 'smtp.mailtrap.io';
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['PHP_MAILER_USERNAME'];
+        $mail->Password = $_ENV['PHP_MAILER_PASSWORD'];
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 2525;
+
+        $mail->setFrom($email, 'Mailtrap Website');
+        $mail->addAddress($_ENV['PHP_MAILER_EMAIL'], 'Me');
+        $mail->Subject = 'New message from your website';
+
+        // Enable HTML if needed
+        $mail->isHTML(true);
+
+        $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", nl2br($message)];
+        $body = join('<br />', $bodyParagraphs);
+        $mail->Body = $body;
+
+        if($mail->send()){
+            header('Location: ../Pages/contact.php');
+            die;
+        } else {
+            $errorMessage = 'Oops, something went wrong. Mailer Error: ' . $mail->ErrorInfo;
+        }
+    }
+}
+?>
+
 <!-- ** HEAD ** -->
 <?php require_once '../Includes/head.php'; ?>
 
@@ -13,7 +80,7 @@ define('PAGE', "Contact");
         <img src="../Images/slider_5.png" alt="" id="boat-image">        
         <div class='title'>
             <span class='top_page_title' id='blue-bg'>
-            Get In Touch With Us
+                <?=$_Contact[0]?>
             </span>
         </div>
     </section>
@@ -22,18 +89,19 @@ define('PAGE', "Contact");
 
 <section class="contact_section">
     <div class="contact">
-        <h1 id='contact-form'>Contact</h1>
-        <form action="">
-            <label for="full-name">Full Name*</label>
-            <input type="text" id="full-name">
+        <h1 id='contact-title'><?=$_Contact[1]?></h1>
+        <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+        <form action="contact.php" method="post" id="contact-form">
+            <label for="full-name"><?=$_Contact[2]?>*</label>
+            <input type="text" id="full-name" name="full-name">
 
-            <label for="email">Email*</label>
-            <input type="text" id="email">
+            <label for="email"><?=$_Contact[3]?>*</label>
+            <input type="text" id="email" name="email">
 
-            <label for="message">Message</label>
-            <textarea id="message" cols="30" rows="10"></textarea>
+            <label for="message"><?=$_Contact[4]?></label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
-            <button class="send_button">Send</button>
+            <button class="send_button" type="submit" value="SendMail"><?=$_Contact[5]?></button>
         </form>
     </div>
     <div class="map">
@@ -45,7 +113,7 @@ define('PAGE', "Contact");
     <div class="info">
         <img src="../Images/place-marker-100.png" alt="">
         <div>
-            <h3>Location:</h3>
+            <h3><?=$_Contact[6]?></h3>
             <p>
             48 Farhat Hachad 5190<br>
             Mahdia, Tunisia
@@ -55,7 +123,7 @@ define('PAGE', "Contact");
     <div class="info">
         <img src="../Images/phone-250.png" alt="">
         <div>
-            <h3>Phone:</h3>
+            <h3><?=$_Contact[7]?></h3>
             <p>
             +216 73 658 118<br>
             +216 50 448 714<br>
