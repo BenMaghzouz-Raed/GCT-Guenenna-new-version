@@ -46,7 +46,7 @@ define('PAGE', "Our Product");
         <div class="details">
             <div class="left">
                 <div class="single-detail">
-                    <div class="num-icon" id="top">
+                    <div class="num-icon" id="top" data-aos="fade-down-right">
                         <img src="../Images/icon_blood.png" alt="">
                         <h2>1</h2>
                     </div>
@@ -55,18 +55,18 @@ define('PAGE', "Our Product");
                     </p>
                 </div>
                 <div class="single-detail">
-                    <div class="num-icon" id="middle">
+                    <div class="num-icon" id="middle" data-aos="fade-down-right">
                         <img src="../Images/icon_blood.png" alt="">
-                        <h2>2</h2>
+                        <h2>3</h2>
                     </div>
                     <p>
                         <?=$_Our_Product[6]?>
                     </p>
                 </div>
                 <div class="single-detail">
-                    <div class="num-icon" id="bottom">
+                    <div class="num-icon" id="bottom" data-aos="fade-down-right">
                         <img src="../Images/icon_blood.png" alt="">
-                        <h2>3</h2>
+                        <h2>5</h2>
                     </div>
                     <p>
                         <?=$_Our_Product[7]?>                    
@@ -76,25 +76,25 @@ define('PAGE', "Our Product");
 
             <div class="right">
                 <div class="single-detail">
-                    <div class="num-icon" id="top">
+                    <div class="num-icon" id="top" data-aos="fade-down-left">
                         <img src="../Images/icon_blood.png" alt="">
-                        <h2>4</h2>
+                        <h2>2</h2>
                     </div>
                     <p>
                         <?=$_Our_Product[8]?>
                     </p>
                 </div>
                 <div class="single-detail">
-                    <div class="num-icon" id="middle">
+                    <div class="num-icon" id="middle" data-aos="fade-down-left">
                         <img src="../Images/icon_blood.png" alt="">
-                        <h2>5</h2>
+                        <h2>4</h2>
                     </div>
                     <p>
                         <?=$_Our_Product[9]?>
                     </p>
                 </div>
                 <div class="single-detail">
-                    <div class="num-icon" id="bottom">
+                    <div class="num-icon" id="bottom" data-aos="fade-down-left">
                         <img src="../Images/icon_blood.png" alt="">
                         <h2>6</h2>
                     </div>

@@ -58,6 +58,9 @@ if (!empty($_POST['company-name'])) {
 
         if(!$mail->send()){
           $errorMessage = 'Oops, something went wrong. Mailer Error: ' . $mail->ErrorInfo;
+        }else{
+          header('Location: ../Pages/index.php');
+          die;
         }
     }
 }
@@ -68,9 +71,12 @@ if (!empty($_POST['company-name'])) {
     <img src="../Images/cancel-96.png" id='btnCloseForm' class="close-button">
     <h1><?=$_Popup_Trade[0]?></h1>
     <span><?=$_Popup_Trade[1]?></span>
-    <form ction="trade_popup.php" method="post">
+    <form action="../Includes/trade_popup.php" method="post" id='trade-form'>
       <div class="form-group">
-        <label for="company-name"><?=$_Popup_Trade[2]?>*</label>
+        <div class="group-error">
+          <label for="company-name"><?=$_Popup_Trade[2]?>*</label>
+          <p class="errormsg" id='error-name'></p>
+        </div>
         <input type="text"  id="company-name" class="form-control" name="company-name"/>
       </div>
       <div class="form-group">
@@ -325,7 +331,10 @@ if (!empty($_POST['company-name'])) {
         </select>
       </div>
       <div class="form-group">
-        <label for="email"><?=$_Popup_Trade[4]?>*</label>
+        <div class="group-error">
+          <label for="email"><?=$_Popup_Trade[4]?>*</label>
+          <p class="errormsg" id='error-mail'></p>
+        </div>
         <input class="form-control" id="email" type="text" name="email"/>
       </div>
       <div class="form-group">

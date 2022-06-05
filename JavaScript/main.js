@@ -20,6 +20,13 @@ function closeForm() {
       $('.form-popup-bg').addClass('is-visible');
     });
     
+    /* Contact Form Interactions */
+    $('#btnOpenForm1').on('click', function(event) {
+        event.preventDefault();
+    
+        $('.form-popup-bg').addClass('is-visible');
+      });
+      
       //close popup when clicking x or off popup
     $('.form-popup-bg').on('click', function(event) {
       if ($(event.target).is('.form-popup-bg') || $(event.target).is('#btnCloseForm')) {
@@ -128,40 +135,37 @@ $(document).ready(function () {
 });
 
 
-// SEND EMAIL
-const constraints = {
-    name: {
-        presence: {allowEmpty: false}
-    },
-    email: {
-        presence: {allowEmpty: false},
-        email: true
-    },
-    message: {
-        presence: {allowEmpty: false}
+// VALIDATE CONTACT FORM 
+$('#contact-form').on('submit', function(e){
+    if ($('#full-name').val()==''){
+        e.preventDefault();
+        $('#error-full-name').text('You must enter your full name').show();
+    }else{
+        $('#error-full-name').hide();
     }
-};
-
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', function (event) {
-    const formValues = {
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        message: form.elements.message.value
-    };
-
-    const errors = validate(formValues, constraints);
-
-    if (errors) {
-        event.preventDefault();
-        const errorMessage = Object
-            .values(errors)
-            .map(function (fieldValues) {
-                return fieldValues.join(', ')
-            })
-            .join("\n");
-
-        alert(errorMessage);
+    
+    if($('#email').val()==''){
+        e.preventDefault();
+        $('#error-mail').text('You must enter your Email').show();
+    }else{
+        $('#error-mail').hide();
     }
-}, false);
+});
+
+
+// VALIDATE TRADE FORM
+$('#trade-form').on('submit', function(e){
+    if ($('#company-name').val()==''){
+        e.preventDefault();
+        $('#error-name').text('You must enter your company name').show();
+    }else{
+        $('#error-name').hide();
+    }
+    
+    if($('#email').val()==''){
+        e.preventDefault();
+        $('#error-mail').text('You must enter your Email').show();
+    }else{
+        $('#error-mail').hide();
+    }
+});

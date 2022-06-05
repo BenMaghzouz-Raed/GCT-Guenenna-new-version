@@ -138,6 +138,9 @@ span.big_title{
     @include breakpoint-down(tablet){
         font-size: rem(52);
     }
+    @include breakpoint-down(small){
+        font-size: rem(38);
+    }
 }
 
 p, label, input, textarea{
@@ -257,10 +260,39 @@ textarea{
     border: none;
     color: white;
     font-size: $small-size;
+    border: 2px solid $dark_blue;
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
     z-index: 1;
     cursor: pointer;
     overflow: hidden;
+    transition: 0.3s;   
+
+    &:hover{
+      color: $dark_blue;
+      border-radius: 0;
+    } 
+
+    &::after{
+        background: white;
+        padding: .5rem .5rem;
+        position: absolute;
+        content: "";
+        z-index: -1;
+        transform: scale(0, 0);
+    
+    }
+    &::after, &:hover::after{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: all 0.35s;
+    }
+    
+    &:hover::after{
+        transform: scale(1,1);
+    }
+    
 }

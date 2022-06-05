@@ -92,10 +92,16 @@ if (!empty($_POST['full-name'])) {
         <h1 id='contact-title'><?=$_Contact[1]?></h1>
         <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
         <form action="contact.php" method="post" id="contact-form">
-            <label for="full-name"><?=$_Contact[2]?>*</label>
+            <div class="group-error">
+                <label for="full-name"><?=$_Contact[2]?>*</label>
+                <p class="errormsg" id='error-full-name'></p>
+            </div>
             <input type="text" id="full-name" name="full-name">
 
-            <label for="email"><?=$_Contact[3]?>*</label>
+            <div class="group-error">
+                <label for="email"><?=$_Contact[3]?>*</label>
+                <p class="errormsg" id='error-mail'></p>
+            </div>
             <input type="text" id="email" name="email">
 
             <label for="message"><?=$_Contact[4]?></label>

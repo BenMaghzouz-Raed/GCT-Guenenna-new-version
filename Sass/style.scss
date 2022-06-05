@@ -1,3 +1,4 @@
+@import "./Home-Slider.scss";
 @import "./Home.scss";
 @import "./Products.scss";
 @import "./About.scss";
@@ -73,12 +74,30 @@
         textarea{
             max-height: 65px;
         }
+
+        
     }
 
     .send_button{
         float: right;
     }
 }
+
+.group-error{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    .errormsg{
+        margin: 0 0 0 16px;
+        color: $dark_red;
+        font-size: 14px;
+        display:none;
+        max-width: 50%;
+        text-align: right;
+    }
+}
+
 .close-button {
   color: $dark_red;
   width: 40px;

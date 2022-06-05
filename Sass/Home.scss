@@ -5,7 +5,7 @@
 
 .header{
     height: 100vh;
-    background-image: url("../Images/slider_1.png");
+    // background-image: url("../Images/slider_1.png");
     background-color: $dark_blue;
     background-position: bottom;
     background-size: cover;
@@ -20,17 +20,8 @@
 
 .slider{
     position: absolute;
-    height: 40%;
-    top: 50%;
-    transform: translateY(-45%);
-    padding-left: $Left_Padding;
-    max-width: 100vw;
+    width: 100vw;
 
-    @include breakpoint-down(tablet){
-        height: 55%;
-        transform: translateY(-50%);
-        padding-left: $Left_Padding-small;
-    }
     .text{ 
         p{
             color: white;
@@ -45,13 +36,13 @@
         margin-top: 80px;
         @include breakpoint-down(small){
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             margin-top: 25px;
         }
         button{
             margin-right: 70px;
             @include breakpoint-down(small){
-                margin-bottom: 25px;
+                margin: 0 0 25px 0;
             }
         }
         .main_button{
@@ -255,6 +246,9 @@
                     color: white;
                     opacity: 90%;
                     letter-spacing: 3px;
+                    @include breakpoint-down(small){
+                        font-size: rem(16);
+                    }
                 }
             }
         
@@ -275,6 +269,7 @@
                 }
                 .main_button:hover{
                     color: $dark_gold;  
+                    border-color: $dark_gold;
                 }
                 .sec_button{
                     border-color: $dark_gold;
