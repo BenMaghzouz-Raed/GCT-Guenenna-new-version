@@ -57,7 +57,7 @@
 
         .dropdown-select{
             height: 32px;
-            line-height: 30px;
+            line-height: 32px;
             @include breakpoint-down(tablet){
                 display: none;
             }
@@ -79,6 +79,7 @@
             z-index: 10000;
 
             span.line{
+                box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, .15);
                 display: block;
                 width: 70%;
                 height: 3px;

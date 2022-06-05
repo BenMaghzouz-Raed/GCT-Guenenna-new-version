@@ -289,11 +289,12 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   overflow: hidden;
-  height: 35vh;
+  height: 36vh;
   padding: 20px 70px;
 }
 
@@ -315,8 +316,11 @@ textarea {
 }
 
 .about_trade img {
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
@@ -335,7 +339,7 @@ textarea {
 }
 
 .about_trade p {
-  width: 60%;
+  width: 70%;
   color: white;
   font-weight: 500;
   font-size: 1.75rem;
@@ -350,6 +354,8 @@ textarea {
 
 .about_trade .main_button {
   border: .125rem solid white;
+  padding: 8px 16px;
+  min-height: 65px;
   -webkit-box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
           box-shadow: -6px 11px 14px -6px rgba(0, 0, 0, 0.5);
 }

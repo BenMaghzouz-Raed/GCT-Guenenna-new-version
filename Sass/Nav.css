@@ -280,7 +280,7 @@ textarea {
 
 .nav .language .dropdown-select {
   height: 32px;
-  line-height: 30px;
+  line-height: 32px;
 }
 
 @media (max-width: 48.6875em) {
@@ -307,6 +307,8 @@ textarea {
 }
 
 .nav .nav_mobile_burger_toggle span.line {
+  -webkit-box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.15);
   display: block;
   width: 70%;
   height: 3px;

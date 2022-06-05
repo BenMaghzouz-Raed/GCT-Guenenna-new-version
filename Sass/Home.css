@@ -481,7 +481,7 @@ textarea {
 
 @media (max-width: 48.6875em) {
   .Product_Section .product {
-    height: 80vh;
+    height: 100vh;
   }
 }
 
@@ -489,9 +489,12 @@ textarea {
   position: absolute;
   z-index: -1;
   top: 50%;
-  -webkit-transform: translateY(-60%);
-          transform: translateY(-60%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 100%;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 48.6875em) {

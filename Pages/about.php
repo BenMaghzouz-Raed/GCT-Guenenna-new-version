@@ -30,12 +30,12 @@ define('PAGE', "About Us");
                 <?=$_About_Us[3]?>
             </p>
         </div>
-        <div class="right">
+        <div class="right" data-aos="fade-left">
             <img src="../Images/full-logo.png" alt="">
         </div>
     </div>
     <div class="presence" id='our-presence'>
-        <div class="left">
+        <div class="left" data-aos="fade-right">
             <img src="../Images/Group 1.png" alt="" id="earth-image" style="width:50%;">
         </div>
         <div class="right">
@@ -69,7 +69,7 @@ define('PAGE', "About Us");
         <?=$_About_Us[13]?>
     </p>
     <div class="testimonials">
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-in-right">
             <span class="title">
                 <img src="../Images/icon_1.png" alt="">
                 <?=$_About_Us[14]?>
@@ -82,7 +82,7 @@ define('PAGE', "About Us");
                 <?=$_About_Us[17]?>
             </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-in">
             <span class="title">
                 <img src="../Images/icon_2.png" alt="">
                 <?=$_About_Us[18]?>
@@ -95,7 +95,7 @@ define('PAGE', "About Us");
                 <?=$_About_Us[21]?>
             </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-in-left">
             <span class="title">
                 <img src="../Images/icon_3.png" alt="">
                 <?=$_About_Us[22]?>

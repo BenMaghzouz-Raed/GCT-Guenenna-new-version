@@ -23,7 +23,7 @@ define('PAGE', "Our Product");
 </header>
 
     <section class="our_story">
-        <div class="image">
+        <div class="image" data-aos="fade-right">
             <img src="../Images/5.jpg" alt="">
         </div>
         <div class="info">
@@ -107,7 +107,7 @@ define('PAGE', "Our Product");
     </section>
 
     <section class="our_story" id='trade-with-us'>
-        <div class="image">
+        <div class="image" data-aos="fade-right">
             <img src="../Images/4.jpg" alt="">
         </div>
         <div class="info">

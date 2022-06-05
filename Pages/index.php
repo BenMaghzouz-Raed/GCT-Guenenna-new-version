@@ -12,8 +12,8 @@ define('PAGE', "Home");
 
     <section class="hero">
         <div class="slider">
-            <div class="text">
-                <span class='big_title'><?=$_Home[0]?></span>
+            <div class="text" data-aos="fade-down-right">
+                <span class='big_title' ><?=$_Home[0]?></span>
                 <p>
                     <?=$_Home[1]?>
                     <br/>
@@ -31,7 +31,7 @@ define('PAGE', "Home");
 
 
 <section class="Home_Section_1">
-    <div class="left">
+    <div class="left" data-aos="fade-right">
         <h1><?=$_Home[5]?></h1>
         <p>
             <?=$_Home[6]?>
@@ -41,7 +41,7 @@ define('PAGE', "Home");
         </p>
         <a href="./about.php#origins"><button class="main_button"><?=$_Home[8]?></button></a>
     </div>
-    <div class="right">
+    <div class="right" data-aos="fade-left">
         <img src="../Images/2.jpg" alt="">
     </div>
 </section>
@@ -49,7 +49,7 @@ define('PAGE', "Home");
 <section class="Home_Section_2">
     <h1><?=$_Home[9]?></h1>
     <div class="testimonials">
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-out-right">
             <span class="title">
                 <img src="../Images/icon_1.png" alt="">
                 <?=$_Home[10]?>
@@ -60,7 +60,7 @@ define('PAGE', "Home");
                 <?=$_Home[12]?>
             </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-out-right">
             <span class="title">
                 <img src="../Images/icon_2.png" alt="">
                 <?=$_Home[13]?>
@@ -71,7 +71,7 @@ define('PAGE', "Home");
                 <?=$_Home[15]?>
             </p>
         </div>
-        <div class="testimonial">
+        <div class="testimonial" data-aos="zoom-out-right">
             <span class="title">
                 <img src="../Images/icon_3.png" alt="">
                 <?=$_Home[16]?>
@@ -85,10 +85,10 @@ define('PAGE', "Home");
     </div>
 </section>
 <section class="Home_Section_1 reverse">
-    <div class="right">
+    <div class="right" data-aos="fade-right">
         <img src="../Images/3.jpg" alt="">
     </div>
-    <div class="left">
+    <div class="left" data-aos="fade-left">
         <h1><?=$_Home[19]?></h1>
         <p>
             <?=$_Home[20]?>
@@ -108,7 +108,7 @@ define('PAGE', "Home");
     <div class="product">
         <img src="../Images/slider_2.png" alt="">
         <div class="content">
-            <div class="text">
+            <div class="text" data-aos="fade-down-right">
                 <span class='big_title'><?=$_Home[24]?>
                     <br/><?=$_Home[25]?>
                 </span>
