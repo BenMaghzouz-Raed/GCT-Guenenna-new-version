@@ -23,14 +23,13 @@ footer{
             position: relative;
             width: 20%;
             @include breakpoint-down(tablet){
-                width: 100%;
+                display: none;
+
             }
             #logo{
                 opacity: 0.85;
                 width: 100%;
-                @include breakpoint-down(tablet){
-                    display: none;
-                }
+                
             }
 
             .social{
@@ -71,6 +70,12 @@ footer{
                 height: 2px;
                 width: 100%;
                 margin: 15px 0;
+            }
+        }
+
+        #logo-line{
+            @include breakpoint-down(tablet){
+                display: none;
             }
         }
     }

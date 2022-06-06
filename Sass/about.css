@@ -434,7 +434,6 @@ textarea {
 
 .more_about .testimonials .testimonial {
   width: 30%;
-  min-height: 65vh;
   max-height: 100vh;
   margin: 0 0 25px 0;
 }

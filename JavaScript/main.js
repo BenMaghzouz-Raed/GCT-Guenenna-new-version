@@ -5,21 +5,17 @@ toggleBtn.addEventListener('click', () => {
   toggleBtn.classList.toggle('active');
 })
 
-
 // Trade With Us PopUp
 function closeForm() {
     $('.form-popup-bg').removeClass('is-visible');
   }
-  
   $(document).ready(function($) {
-    
     /* Contact Form Interactions */
     $('#btnOpenForm').on('click', function(event) {
       event.preventDefault();
-  
       $('.form-popup-bg').addClass('is-visible');
     });
-    
+
     /* Contact Form Interactions */
     $('#btnOpenForm1').on('click', function(event) {
         event.preventDefault();
@@ -37,7 +33,6 @@ function closeForm() {
          
 });
 
-
 // Select Country
 function create_custom_dropdowns() {
     $('select').each(function (i, select) {
@@ -53,11 +48,9 @@ function create_custom_dropdowns() {
             });
         }
     });
-
 }
 
 // Event listeners
-
 // Open/close
 $(document).on('click', '.dropdown-select', function (event) {
     if($(event.target).hasClass('dd-searchbox')){
@@ -151,7 +144,6 @@ $('#contact-form').on('submit', function(e){
         $('#error-mail').hide();
     }
 });
-
 
 // VALIDATE TRADE FORM
 $('#trade-form').on('submit', function(e){

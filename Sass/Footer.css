@@ -287,19 +287,13 @@ footer .columns .logo {
 
 @media (max-width: 48.6875em) {
   footer .columns .logo {
-    width: 100%;
+    display: none;
   }
 }
 
 footer .columns .logo #logo {
   opacity: 0.85;
   width: 100%;
-}
-
-@media (max-width: 48.6875em) {
-  footer .columns .logo #logo {
-    display: none;
-  }
 }
 
 footer .columns .logo .social {
@@ -351,6 +345,12 @@ footer .columns .line {
     height: 2px;
     width: 100%;
     margin: 15px 0;
+  }
+}
+
+@media (max-width: 48.6875em) {
+  footer .columns #logo-line {
+    display: none;
   }
 }
 

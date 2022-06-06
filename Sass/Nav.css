@@ -345,8 +345,8 @@ textarea {
 }
 
 .nav .nav_mobile_burger_toggle span.line {
-  -webkit-box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.2);
   display: block;
   width: 70%;
   height: 3px;

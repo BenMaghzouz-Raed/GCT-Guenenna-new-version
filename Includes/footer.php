@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="line"></div>
+            <div class="line" id='logo-line'></div>
             
             <div class="info">
                 <h3><?=$_Nav_Footer[3]?></h3>
@@ -42,15 +42,13 @@
 
         </div>
         <div class="credit">
-            ©2020 <?=$_Nav_Footer[9]?><span><a href="mailto:bmraed7@gmail.com">BMRaed</a></span>
+        <?php echo date("Y"); ?> <?=$_Nav_Footer[9]?><span><a href="mailto:raed.maghzouz@gmail.com">BMRaed</a></span>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script> 
+    <script>AOS.init();</script> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script src="../JavaScript/main.js" defer></script>

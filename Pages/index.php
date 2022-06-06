@@ -10,68 +10,51 @@ define('PAGE', "Home");
     <!-- ** NAV ** -->
     <?php include '../Includes/nav.php'; ?>
 
-    <!-- <section class="hero">
+    <div class="slider-container">
+        <div class="slider-control left inactive"></div>
+        <div class="slider-control right"></div>
+        <ul class="slider-pagi"></ul>
         <div class="slider">
-            <div class="text" data-aos="fade-down-right">
-                <span class='big_title' ><?=$_Home[0]?></span>
-                <p>
-                    <?=$_Home[1]?>
-                    <br/>
-                    <?=$_Home[2]?>
-                </p>     
+            <div class="slide slide-0 active">
+                <div class="slide__bg">
+                </div>
+                <div class="slide__text text">
+                    <span class="slide__text-heading big_title"><?=$_Home[0]?></span>
+                    <p class="slide__text-desc">
+                        <?=$_Home[1]?>
+                        <br/>
+                        <?=$_Home[2]?>
+                    </p> 
+                    <div class="buttons slide__text-link">
+                        <a href="./contact.php#contact-form"><button class="main_button"><?=$_Home[3]?></button></a>
+                        <a href="./about.php"><button class="sec_button"><?=$_Home[4]?></button></a>
+                    </div>
+                </div>
             </div>
-            <div class="buttons">
-                <a href="./contact.php#contact-form"><button class="main_button"><?=$_Home[3]?></button></a>
-                <a href="./about.php"><button class="sec_button"><?=$_Home[4]?></button></a>
+            <div class="slide slide-1">
+            <div class="slide__bg">
             </div>
-        </div>
-    </section> -->
-<div class="slider-container">
-  <div class="slider-control left inactive"></div>
-  <div class="slider-control right"></div>
-  <ul class="slider-pagi"></ul>
-  <div class="slider">
-    <div class="slide slide-0 active">
-        <div class="slide__bg">
-        </div>
-        <div class="slide__text text">
-            <span class="slide__text-heading big_title"><?=$_Home[0]?></span>
-            <p class="slide__text-desc">
-                <?=$_Home[1]?>
-                <br/>
-                <?=$_Home[2]?>
-            </p> 
-            <div class="buttons slide__text-link">
-                <a href="./contact.php#contact-form"><button class="main_button"><?=$_Home[3]?></button></a>
-                <a href="./about.php"><button class="sec_button"><?=$_Home[4]?></button></a>
+            <div class="slide__content text">
+                <div class="slide__text">
+                    <span class="slide__text-heading big_title">
+                        <?=$_Home[24]?>
+                        <?=$_Home[25]?>
+                    </span>
+                    <p class="slide__text-desc">
+                        <?=$_Home[26]?>
+                        <br/>
+                        <?=$_Home[27]?>
+                    </p> 
+                    <div class="buttons slide-1-buttons">
+                        <button class="main_button" id='btnOpenForm'><?=$_Home[28]?></button>
+                        <a href="./products.php#our-oliver"><button class="sec_button"><?=$_Home[29]?></button></a>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
-    <div class="slide slide-1">
-      <div class="slide__bg">
-      </div>
-      <div class="slide__content text">
-        <div class="slide__text">
-            <span class="slide__text-heading big_title">
-                <?=$_Home[24]?>
-                <?=$_Home[25]?>
-            </span>
-            <p class="slide__text-desc">
-                <?=$_Home[26]?>
-                <br/>
-                <?=$_Home[27]?>
-            </p> 
-            <div class="buttons slide-1-buttons">
-                <button class="main_button" id='btnOpenForm'><?=$_Home[28]?></button>
-                <a href="./products.php#our-oliver"><button class="sec_button"><?=$_Home[29]?></button></a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </header>
-
 
 <section class="Home_Section_1">
     <div class="left" data-aos="fade-right">

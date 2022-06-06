@@ -14,9 +14,14 @@ require_once "lang-" . $_SESSION["lang"] . ".php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../Images/logo3.svg">
-    <title>GCT GUENENNA | <?php echo PAGE ?> </title>
-
+    <link rel="shortcut icon" href="../Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../Images/favicon.ico" type="image/x-icon">
+    <title>GUENENNA Commerce Tunisie (GCT) | 
+        <?php if(PAGE == 'Our Product'){echo $_Our_Product[1];} else{echo PAGE;} ?> 
+    </title>
+    <meta name="description" content="GCT Guenenna Commerce De Tunisie is an import/export trading company, providing quality products and a Tunisian biological Extra Virgin olive oil">
+    <meta name="keywords" content="GCT, GUENENNA, IMPORT, EXPORT, COMMERCE TUNISIE, OLIVE OIL">
+    <meta name="author" content="GUENENNA Commerce Tunisie">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
